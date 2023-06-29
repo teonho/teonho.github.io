@@ -1,0 +1,49 @@
+[#include](https://www.facebook.com/hashtag/include?__eep__=6&__cft__[0]=AZUqXUWR3Fi0J4xQPk8Y6vvwLNX9-iuou0qesjRaA20YsYqDjDCoe2q70_CB0jRgjwpeWd5Ag2jUaVfoZ-AiBa3oKriK1G3YKiNQCV_nafw_zkpipEqInYhgGKpEUCEtsCKRmGXPI1UWu8tn7XlVY5liFSI7Xh6kGq8NQTQMRoG_3T7fcA4wek24xgut7lU6voxQPgGs5NiBiDroaxR33lq7&__tn__=*NK-R) <stdio.h>
+
+int check1(int n){
+
+while(n){
+
+if(n%10==6)
+
+return 1;
+
+n/=10;
+
+}
+
+return 0;
+
+}
+
+int check2( int n){
+
+int sum=0;
+
+while(n){
+
+sum+=n%10;
+
+n/=10;
+
+}
+
+return sum%8==0;
+
+}
+
+int main(){
+
+for(int i=1;i<=1000;i++){
+
+if(check1(i)==1&&check2(i)==1)
+
+printf("%d\n",i);
+
+}
+
+return 0;
+
+đề bài : kiểm tra một số có chứa số 6 không ? và có tổng chữ số chia hết cho 8 không ?
+
+cho em hỏi là ở dòng if (check1(i)==1 && check2(i)==1) thì check2(i)==1 nhưng mà ở trên hàm check2 thì chỉ có return sum %8==0 chứ đâu có return 0 hay return 1 đâu mn nhỉ
